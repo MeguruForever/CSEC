@@ -24,8 +24,10 @@ def index():
         buttonA = request.values.get("buttonSearch")
         text = request.values.get("text")
         if (buttonA=='search'):
-            sql = "SELECT `text` FROM resource WHERE `key` = '"
-            sql+=text+"'"
+            if str(text)=="":
+                    return render_template("index.html",data2="不能为空")
+            sql = "SELECT `text` FROM `resource` WHERE `key` = '"
+            sql=sql+str(text)+"'"
             cursor.execute(sql)
             result = cursor.fetchall()
             return render_template("index.html",data2=result)
