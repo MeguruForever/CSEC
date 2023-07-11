@@ -13,18 +13,46 @@
     a {
         font-size: 10px;
     }
+    b {
+        font-size: 50px;
+        text-align: center;
+    }
     </style>
 <body class="mdui-theme-primary-indigo mdui-theme-accent-blue">
+    <b><Center>CSCE</Center></b>
+<div class="mdui-divider"></div>
 <div class="mdui-container">
     <form action="" method="post">
-        <input type="text" name="text" id="" value="" class="mdui-textfield-input" placeholder="搜索内容"/>
+        <input type="text" name="text" id="" value="" class="mdui-textfield-input mdui-color-theme-grey" placeholder="搜索内容"/>
         <button type=submit value='search' name="buttonSearch" class="mdui-btn mdui-color-theme-accent mdui-ripple">
             <i class="mdui-icon material-icons">搜索</i>
         </button>
+        <select class="mdui-select" mdui-select>
+            <option value="1">{{state1}}</option>
+            <option value="2">{{state2}}</option>
+            <option value="3" disabled>{{state3}}</option>
+            <option value="4">{{state4}}</option>
+            <option value="5">{{state5}}</option>
+            <option value="6">{{state6}}</option>
+        </select>
         <br>
-        <a>{{data2}}</a>
-    </form>
-</div>
+        <div class="mdui-card">
+        <div class="mdui-divider"></div>
+            <br><br>
+    <!-- 卡片的媒体内容，可以包含图片、视频等媒体内容，以及标题、副标题 -->
+    <div class="mdui-card-media">
+        <img src="https://raw.githubusercontent.com/MeguruForever/assets/master/atri.jpeg" width="500" height="400"/>
+
+    <!-- 卡片中可以包含一个或多个菜单按钮 -->
+    <div class="mdui-card-menu">
+        <button class="mdui-btn mdui-btn-icon mdui-text-color-white">
+            <i class="mdui-icon material-icons">share</i>
+        </button>
+    </div>
+    </div>
+    <!-- 卡片的内容 -->
+    <div class="mdui-card-content">{{data2}}</div>
+
 <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>    
 </body>
 </html>
