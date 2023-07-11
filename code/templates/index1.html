@@ -82,10 +82,6 @@
         <h1>CSCE</h1>
         <div class="divider"></div>
         <form action="" method="post">
-            <input type="text" name="text" id="" value="" class="textfield" placeholder="搜索内容" />
-            <button type="submit" value="search" name="buttonSearch" class="button-search">
-                <i class="mdui-icon material-icons">搜索</i>
-            </button>
             {% if data2 %}
             <br>
             <select class="mdui-select" name="cate_1">
@@ -95,6 +91,9 @@
                 {% endfor %}
             </select>
             {% endif %}
+            <button type="submit" value="OK" name="buttonSearch" class="button-search">
+                <i class="mdui-icon material-icons">OK</i>
+            </button>
         </form>
         <div class="card">
             <div class="divider"></div>
