@@ -4,24 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css"/>
 </head>
 <style>
     input {
         font-size: 30px;
     }
     a {
-        font-size: 30px;
+        font-size: 10px;
     }
     </style>
-<body>
-<div>
+<body class="mdui-theme-primary-indigo mdui-theme-accent-blue">
+<div class="mdui-container">
     <form action="" method="post">
-        hello
-        <hr>
-        <br><input type="text" name="text" id="" value="" style="height:40px;width:500px;" />
-        <input type=submit value='search' name="buttonSearch">
+        <input type="text" name="text" id="" value="" class="mdui-textfield-input" placeholder="搜索内容"/>
+        <button type=submit value='search' name="buttonSearch" class="mdui-btn mdui-color-theme-accent mdui-ripple">
+            <i class="mdui-icon material-icons">搜索</i>
+        </button>
         <br>
-        <a>{{data}}</a>
+        <a>{{data2}}</a>
     </form>
+</div>
+<script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>    
 </body>
 </html>
