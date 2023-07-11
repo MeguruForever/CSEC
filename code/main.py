@@ -2,6 +2,19 @@ import flask
 from flask import Flask,render_template,request
 import pymysql
 
+def find_position_name(subject,cursor):
+    search1 = "select position_name from resource where subject_name = '%s';"%(subject)
+    cursor.execute(search1)
+    lst1 = cursor.fetchall()
+    lst2 = []
+    lst3 = []
+    for i in lst1:
+        x = list(i)
+        lst2.append(x)
+    for i in lst2:
+        for j in i:
+            lst3.append(j)
+    return lst3
 app = Flask(__name__)
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_PORT'] = 3306
@@ -26,8 +39,8 @@ def index():
         if (buttonA=='search'):
             if str(text)=="":
                     return render_template("index.html",data2="不能为空")
-            sql = "SELECT `text` FROM `resource` WHERE `key` = '"
-            sql=sql+str(text)+"'"
+            sql = "SELECT `text` FROM `resource` WHERE `key` like '%"
+            sql=sql+str(text)+"%'"
             cursor.execute(sql)
             result = cursor.fetchall()
             return render_template("index.html",data2=result)
