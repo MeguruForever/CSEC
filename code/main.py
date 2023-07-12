@@ -18,8 +18,8 @@ app = Flask(__name__)
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_PORT'] = 3306
 app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'luoye123CFY'
-app.config['MYSQL_DB'] = 'string_from'
+app.config['MYSQL_PASSWORD'] = '12345678'
+app.config['MYSQL_DB'] = 'flask_dbd'
 app.config['MYSQL_CHARSET'] = 'utf8'
 @app.route('/',methods=['POST','GET'])
 def index():
@@ -43,18 +43,29 @@ def index():
                 return render_template("index1.html", data2=positions)
         if (buttonA=='OK'):
             sql="select requirement from resource where position_name like '%{}%';".format(request.form.get('cate_1'))
+            position=request.form.get('cate_1')
             cursor.execute(sql)
             lst1 = cursor.fetchall()
+            lst2 = []
             x = list(lst1[0])
             y = x[0]
+            for i in y:
+                if i == "。":
+                    y.replace("。","")
             str1 = ""
             for i in range(0,len(y) - 1):
                 if y[i].isdigit() == True and y[i + 1] == ".":
-                    str1 += "\r\n"
+                    str1 += "\n"
+                    lst2.append(str1)
+                    str1 = ""
                 str1 += y[i]
-            str1 += "。"
-            return render_template("index2.html", data1=str1)
+            lst2.remove(lst2[0])
+            return render_template("index2.html", position1=position,data1=lst2)
         if (buttonA=='back'):
             return render_template("index.html", data1='首页')
+        if (buttonA=='share'):
+            return render_template("index.html", data1='分享')
+        if (buttonA=='team'):
+            return render_template("index.html", data1='团队')
 if __name__ == '__main__':
     app.run(host="0.0.0.0",port=2222,debug=True)

@@ -8,10 +8,22 @@
     <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
     <style>
         body {
-            background-image: "https://raw.githubusercontent.com/MeguruForever/assets/master/atri.jpeg";
-            padding: 20px;
+            background-image: url("https://raw.githubusercontent.com/MeguruForever/assets/master/atri.jpeg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
         }
-
+        .textfield {
+            font-size: 18px;
+            width: 100%;
+            height: auto; /* 调整文本框的高度 */
+            padding: 10px;
+            border: 1px solid #ccc; /* 添加边框样式 */
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            resize: none; /* 防止用户调整文本框大小 */
+        }
         .container {
             max-width: 600px;
             margin: 0 auto;
@@ -31,16 +43,6 @@
         .divider {
             margin-bottom: 20px;
         }
-
-        .textfield {
-            font-size: 20px;
-            width: 100%;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
         .button-search {
             display: block;
             width: 100%;
@@ -74,16 +76,77 @@
         .card-content {
             padding: 20px;
         }
+        .custom-list {
+            width: 200px; /* 调整宽度为200px */
+            position: relative; /* 设置为相对定位，以便可以放置在其他元素上面 */
+            z-index: 1; /* 设置层级为1，以确保在其他元素上面显示 */
+            background-color: transparent;
+        }       
+        .custom-list .mdui-list-item-content {
+            color: black; /* 将字体颜色设为black色 */
+        }
+        .button-search1 {
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 10px;
+            background-color: #2196f3;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+            display: flex;
+}
+
+.button-search:hover {
+    background-color: #1976d2;
+}
+
+.button-search i {
+    margin-right: 5px;
+}
     </style>
 </head>
 
 <body>
+    <form action="" method="post">
+    <ul class="custom-list mdui-list" mdui-collapse="{accordion: true}">
+        <li class="mdui-list-item mdui-ripple">
+            <button type="submit" name="buttonSearch" value="back" class="button-search1">
+                <i class="mdui-list-item-icon mdui-icon material-icons">home</i>
+                <div class="mdui-list-item-content">首页</div>
+            </button>
+        </li>
+        <li class="mdui-list-item mdui-ripple">
+            <button type="submit" name="buttonSearch" value="share" class="button-search1">
+                <i class="mdui-list-item-icon mdui-icon material-icons">share</i>
+                <div class="mdui-list-item-content">分享知识</div>
+            </button>
+        </li>
+        <li class="mdui-list-item mdui-ripple">
+            <button type="submit" name="buttonSearch" value="team" class="button-search1">
+                <i class="mdui-list-item-icon mdui-icon material-icons">people</i>
+                <div class="mdui-list-item-content">关于团队</div>
+            </button>
+        </li>
+    </ul>
+    </form>
     <div class="container">
         <h1>CSCE</h1>
         <div class="divider"></div>
         <div class="card">
             <div class="divider"></div>
-            <span style="white-space: pre-line;">{{data1}}</span>
+            {% if data1 %}
+            <br>
+            <h1>{{ position1 }}的职位需求</h1>
+            <br>
+                {% for position in data1 %}
+                <textarea class="textfield">{{ position }}</textarea>
+                {% endfor %}
+            {% endif %}
         </div>
         <form action="" method="post">
             <button type="submit" value="back" name="buttonSearch" class="button-search">
