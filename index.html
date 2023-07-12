@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSEC</title>
+    <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
+    <style>
+        body {
+            background-image: "https://raw.githubusercontent.com/MeguruForever/assets/master/atri.jpeg";
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .divider {
+            margin-bottom: 20px;
+        }
+
+        .textfield {
+            font-size: 20px;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .button-search {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            background-color: #2196f3;
+            color: #fff;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        select {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-top: 10px;
+        }
+
+        .card {
+            margin-top: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>CSCE</h1>
+        <div class="divider"></div>
+        <form action="" method="post">
+            <input type="text" name="text" id="" value="" class="textfield" placeholder="搜索内容" />
+            <button type="submit" value="search" name="buttonSearch" class="button-search">
+                <i class="mdui-icon material-icons">搜索</i>
+            </button>
+            {% if data2 %}
+            <br>
+            <select class="mdui-select" name="cate_1">
+                <option selected disabled hidden>请选择</option>
+                {% for position in data2 %}
+                <option>{{ position }}</option>
+                {% endfor %}
+            </select>
+            {% endif %}
+        </form>
+        <div class="card">
+            <div class="divider"></div>
+            <span style="white-space: pre-line;",class = "card-content">{{data1}}</span>
+            
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+</body>
+
+</html>
