@@ -18,9 +18,9 @@ app = Flask(__name__)
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_PORT'] = 3306
 app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = '12345678'
-app.config['MYSQL_DB'] = 'flask_dbd'
-app.config['MYSQL_CHARSET'] = 'utf8mb4'
+app.config['MYSQL_PASSWORD'] = 'luoye123CFY'
+app.config['MYSQL_DB'] = 'string_from'
+app.config['MYSQL_CHARSET'] = 'utf8'
 @app.route('/',methods=['POST','GET'])
 def index():
     mysql = pymysql.connect(host=app.config['MYSQL_HOST'],
@@ -46,8 +46,14 @@ def index():
             cursor.execute(sql)
             lst1 = cursor.fetchall()
             x = list(lst1[0])
-
-            return render_template("index2.html", data1=x[0])
+            y = x[0]
+            str1 = ""
+            for i in range(0,len(y) - 1):
+                if y[i].isdigit() == True and y[i + 1] == ".":
+                    str1 += "\r\n"
+                str1 += y[i]
+            str1 += "。"
+            return render_template("index2.html", data1=str1)
         if (buttonA=='back'):
             return render_template("index.html", data1='首页')
 if __name__ == '__main__':
