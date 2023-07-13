@@ -31,7 +31,7 @@ def index():
                             charset=app.config['MYSQL_CHARSET'])
     cursor = mysql.cursor()
     if request.method=='GET':
-        return render_template('index.html',data1='首页')
+        return render_template('index5.html',data1='首页')
     if request.method=='POST':
         buttonA = request.values.get("buttonSearch")
         text = request.values.get("text")
@@ -61,11 +61,11 @@ def index():
                 str1 += y[i]
             lst2.remove(lst2[0])
             return render_template("index2.html", position1=position,data1=lst2)
-        if (buttonA=='back'):
-            return render_template("index.html", data1='首页')
-        if (buttonA=='share'):
-            return render_template("index.html", data1='分享')
-        if (buttonA=='team'):
-            return render_template("index.html", data1='团队')
+        if (buttonA == 'enter'):
+            return render_template("index.html",data1 = '查询')
+        if (buttonA == 'back'):
+            return render_template("index5.html", data1='首页')
+        if (buttonA== 'share'):
+            return render_template("index4.html", data1='分享')
 if __name__ == '__main__':
     app.run(host="0.0.0.0",port=2222,debug=True)
