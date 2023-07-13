@@ -71,5 +71,7 @@ def index():
             return render_template("index3.html",)
         if (buttonA=='team'):
             return render_template("index5.html",)
+        if (buttonA=='register'):
+            return render_template("register.html",)
 if __name__ == '__main__':
     app.run(host="0.0.0.0",port=2222,debug=True)

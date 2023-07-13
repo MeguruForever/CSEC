@@ -1,0 +1,13 @@
+"filename", "language", "Python", "CSS", "HTML", "XML", "comment", "blank", "total"
+"/Users/gaojiaye/CSECc/CSEC/code/main.py", "Python", 10, 0, 0, 0, 0, 0, 10
+"/Users/gaojiaye/CSECc/CSEC/code/templates/img/1.svg", "XML", 0, 0, 0, 1, 0, 0, 1
+"/Users/gaojiaye/CSECc/CSEC/code/templates/img/2.svg", "XML", 0, 0, 0, 1, 0, 0, 1
+"/Users/gaojiaye/CSECc/CSEC/code/templates/img/showcase.svg", "XML", 0, 0, 0, 1, 0, 0, 1
+"/Users/gaojiaye/CSECc/CSEC/code/templates/index.html", "HTML", 0, 0, 52, 0, 0, 1, 53
+"/Users/gaojiaye/CSECc/CSEC/code/templates/index1.html", "HTML", 0, 0, 60, 0, 0, 1, 61
+"/Users/gaojiaye/CSECc/CSEC/code/templates/index2.html", "HTML", 0, 0, 63, 0, 0, -1, 62
+"/Users/gaojiaye/CSECc/CSEC/code/templates/index3.html", "HTML", 0, 0, 148, 0, 0, 15, 163
+"/Users/gaojiaye/CSECc/CSEC/code/templates/index4.html", "HTML", 0, 0, 161, 0, 0, 16, 177
+"/Users/gaojiaye/CSECc/CSEC/code/templates/index5.html", "HTML", 0, 0, 198, 0, 5, 12, 215
+"/Users/gaojiaye/CSECc/CSEC/code/templates/style.css", "CSS", 0, 10, 0, 0, 0, 1, 11
+"Total", "-", 10, 10, 682, 3, 5, 45, 755

@@ -1,0 +1,42 @@
+Date : 2023-07-13 15:34:33
+Directory : /Users/gaojiaye/CSECc/CSEC/code
+Total : 11 files,  1052 codes, 5 comments, 83 blanks, all 1140 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| HTML     |          6 |        965 |          5 |         81 |      1,051 |
+| Python   |          1 |         74 |          0 |          1 |         75 |
+| CSS      |          1 |         10 |          0 |          1 |         11 |
+| XML      |          3 |          3 |          0 |          0 |          3 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                       | files      | code       | comment    | blank      | total      |
++------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                          |         11 |      1,052 |          5 |         83 |      1,140 |
+| . (Files)                                                  |          1 |         74 |          0 |          1 |         75 |
+| templates                                                  |         10 |        978 |          5 |         82 |      1,065 |
+| templates (Files)                                          |          7 |        975 |          5 |         82 |      1,062 |
+| templates/img                                              |          3 |          3 |          0 |          0 |          3 |
++------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                   | language | code       | comment    | blank      | total      |
++------------------------------------------------------------+----------+------------+------------+------------+------------+
+| /Users/gaojiaye/CSECc/CSEC/code/main.py                    | Python   |         74 |          0 |          1 |         75 |
+| /Users/gaojiaye/CSECc/CSEC/code/templates/img/1.svg        | XML      |          1 |          0 |          0 |          1 |
+| /Users/gaojiaye/CSECc/CSEC/code/templates/img/2.svg        | XML      |          1 |          0 |          0 |          1 |
+| /Users/gaojiaye/CSECc/CSEC/code/templates/img/showcase.svg | XML      |          1 |          0 |          0 |          1 |
+| /Users/gaojiaye/CSECc/CSEC/code/templates/index.html       | HTML     |        148 |          0 |         14 |        162 |
+| /Users/gaojiaye/CSECc/CSEC/code/templates/index1.html      | HTML     |        155 |          0 |         13 |        168 |
+| /Users/gaojiaye/CSECc/CSEC/code/templates/index2.html      | HTML     |        155 |          0 |         11 |        166 |
+| /Users/gaojiaye/CSECc/CSEC/code/templates/index3.html      | HTML     |        148 |          0 |         15 |        163 |
+| /Users/gaojiaye/CSECc/CSEC/code/templates/index4.html      | HTML     |        161 |          0 |         16 |        177 |
+| /Users/gaojiaye/CSECc/CSEC/code/templates/index5.html      | HTML     |        198 |          5 |         12 |        215 |
+| /Users/gaojiaye/CSECc/CSEC/code/templates/style.css        | CSS      |         10 |          0 |          1 |         11 |
+| Total                                                      |          |      1,052 |          5 |         83 |      1,140 |
++------------------------------------------------------------+----------+------------+------------+------------+------------+
