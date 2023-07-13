@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大学生就业咨询服务平台</title>
+    <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
+    <style>
+        body {
+            background-image: url("https://raw.githubusercontent.com/MeguruForever/assets/master/atri.jpeg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .divider {
+            margin-bottom: 20px;
+        }
+
+        .textfield {
+            font-size: 20px;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .button-search {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            background-color: #2196f3;
+            color: #fff;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        select {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-top: 10px;
+        }
+
+        .card {
+            margin-top: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+        
+        .custom-list {
+            width: 200px;
+            position: relative;
+            z-index: 1;
+            background-color: transparent;
+        }
+        
+        .custom-list .mdui-list-item-content {
+            color: black;
+        }
+        
+        .button-search1 {
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 10px;
+            background-color: #2196f3;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+            display: flex;
+        }
+        
+        .button-search:hover {
+            background-color: #1976d2;
+        }
+        
+        .button-search i {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" method="post">
+        <ul class="custom-list mdui-list" mdui-collapse="{accordion: true}">
+            <li class="mdui-list-item mdui-ripple">
+                <button type="submit" name="buttonSearch" value="back" class="button-search1">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">home</i>
+                    <div class="mdui-list-item-content">首页</div>
+                </button>
+            </li>
+            <li class="mdui-list-item mdui-ripple">
+                <button type="submit" name="buttonSearch" value="share" class="button-search1">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">share</i>
+                    <div class="mdui-list-item-content">分享知识</div>
+                </button>
+            </li>
+
+        </ul>
+    </form>
+    <div class="container">
+        <h1>大学生就业咨询服务平台</h1>
+        <div class="divider"></div>
+        <form action="/submit" method="post">
+            <input type="text" name="major" id="" value="" class="textfield" placeholder="专业名" required />
+            <input type="text" name="occupation" id="" value="" class="textfield" placeholder="职业名" required />
+            <textarea name="requirements" id="" class="textfield" placeholder="要求" required></textarea>
+            <button type="submit" value="submit" name="buttonSubmit" class="button-search">
+                <i class="mdui-icon material-icons">发表</i>
+            </button>
+        </form>
+        <div class="card">
+            <div class="divider"></div>
+            <span style="white-space: pre-line;",class = "card-content">{{data1}}</span>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+</body>
+
+</html>
