@@ -62,10 +62,14 @@ def index():
             lst2.remove(lst2[0])
             return render_template("index2.html", position1=position,data1=lst2)
         if (buttonA == 'enter'):
-            return render_template("index.html",data1 = '查询')
+            return render_template("index.html",)
         if (buttonA == 'back'):
-            return render_template("index5.html", data1='首页')
+            return render_template("index.html",)
         if (buttonA== 'share'):
-            return render_template("index4.html", data1='分享')
+            return render_template("index4.html",)
+        if (buttonA=='submit'):
+            return render_template("index3.html",)
+        if (buttonA=='team'):
+            return render_template("index5.html",)
 if __name__ == '__main__':
     app.run(host="0.0.0.0",port=2222,debug=True)
