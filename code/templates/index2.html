@@ -14,6 +14,9 @@
             background-repeat: no-repeat;
             height: 100vh;
         }
+        .wrapper {
+            display: flex;
+        }
         .textfield {
             font-size: 18px;
             width: 100%;
@@ -31,6 +34,7 @@
             border-radius: 5px;
             padding: 20px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            flex: 1;
         }
 
         h1 {
@@ -81,6 +85,7 @@
             position: relative; /* 设置为相对定位，以便可以放置在其他元素上面 */
             z-index: 1; /* 设置层级为1，以确保在其他元素上面显示 */
             background-color: transparent;
+            flex: 1;
         }       
         .custom-list .mdui-list-item-content {
             color: black; /* 将字体颜色设为black色 */
